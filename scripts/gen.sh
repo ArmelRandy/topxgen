@@ -1,0 +1,51 @@
+ARGS="\
+    --model_name_or_path google/gemma-3-27b-it\
+    --tokenizer_name_or_path google/gemma-3-27b-it\
+    --inference_api vllm\
+    --api_key <YOUR_API_KEY_IF_REQUIRED>\
+    --request_batch_size 256\
+    --seed 122\
+    --max_new_tokens 500\
+    --temperature 1.0\
+    --do_sample\
+    --top_p 1.0\
+    --repetition_penalty 1.0\
+    --num_return_sequences 1\
+    --num_beams 1\
+    --verbose\
+    --languages Basque Hausa Igbo Kinyarwanda Nepali Somali Sundanese Swahili Urdu Xhosa\
+    --seed_topics_path topics/wikipedia_train_topics.txt\
+    --output_dir data/wiki/gemma-3-27b-it/topxgen/T=1.0\
+    --number_of_instructions 2000\
+    --number_of_icl_demonstrations 8\
+    --number_of_icl_phrases 4\
+    --number_of_generations_per_step 2\
+    --use_nllb\
+    --nllb_name_or_path facebook/nllb-200-3.3B\
+   "
+
+ARGS="\
+    --model_name_or_path /path/to/SELFBTREVERSE/GEMMA/T=1.0/checkpoints-llama-3-8b-sun-wiki/checkpoint-5000\
+    --tokenizer_name_or_path meta-llama/Meta-Llama-3-8B\
+    --inference_api vllm\
+    --api_key <YOUR_API_KEY_IF_REQUIRED>\
+    --request_batch_size 256\
+    --seed 122\
+    --max_new_tokens 500\
+    --temperature 0.0\
+    --top_p 1.0\
+    --repetition_penalty 1.0\
+    --num_return_sequences 1\
+    --num_beams 5\
+    --verbose\
+    --languages Sundanese\
+    --seed_topics_path topics/wikipedia_train_topics.txt\
+    --output_dir data/wiki/gemma-3-27b-it/topxgen/T=1.0\
+    --number_of_instructions 20\
+    --number_of_icl_demonstrations 8\
+    --number_of_icl_phrases 4\
+    --number_of_generations_per_step 2\
+    --template_key 14\
+    --number_of_demonstrations 5\
+    --translate_dir Llama-3-8b-checkpoint-5000-round-1-5-shot\
+   "

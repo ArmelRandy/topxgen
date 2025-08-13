@@ -1,0 +1,15 @@
+vllm
+transformers
+sacrebleu
+accelerate
+spacy
+datasets
+rouge-score
+sentence-splitter
+wandb
+grakel
+huggingface_hub==0.27.0
+bm25s[full]
+rank_bm25
+rouge-score
+sonar-space
