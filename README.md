@@ -16,12 +16,8 @@ Official implementation of [TopXGen: Topic-Diverse Parallel Data Generation for 
     - 3.5 [Evaluation](#evaluation)
     - 3.6 [Ablation studies](#ablations-studies)
 4. [Contributions](#contributions)
-    - 4.1 [How to add a new model?](#how-to-add-a-new-model) 
-    - 4.2 [How to add a new MT benchmark?](#how-to-add-a-new-mt-benchmark)
-    - 4.3 [How to add a new MT method?](#how-to-add-a-new-mt-method)
-5. [Miscellaneous](#miscellaneous)
-6. [Aknowledgements](#aknowledgements)
-7. [Citations](#citations)
+5. [Aknowledgements](#aknowledgements)
+6. [Citations](#citations)
 
 # Overview
 
@@ -47,7 +43,7 @@ You might also require [FlashInfer](https://github.com/flashinfer-ai/flashinfer)
 
 ## Dataset Generation
 
-In the paper, we use [gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it) to generate paragraphs into 10 languages: Basque, Hausa, Igbo, Kinyarwanda, Nepali, Somali, Sundanese, Swahili, Urdu and Xhosa. It is possible to control the generation parameters (temperature, top_p, repetition penalty etc.) and how the generation prompts are constructed.
+In the paper, we use [gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it) to generate paragraphs into 10 languages: Basque, Hausa, Igbo, Kinyarwanda, Nepali, Somali, Sundanese, Swahili, Urdu and Xhosa. It is possible to control the generation parameters (temperature, top_p, repetition penalty etc.) and how the generation prompts are constructed. Our dataset is available [here](https://huggingface.co/datasets/almanach/topxgen-gemma-3-27b-and-nllb-3.3b). You can use the following command to generate your own dataset:
 
 ```bash
 python\
@@ -162,8 +158,7 @@ accelerate launch\
     --num_processes=$GPUS_PER_NODE\
     train.py\
 ```
-
-Our Llama-2-7b- and LLama-3-8b-based models are available on [Hugging Face](https://huggingface.co/collections/ArmelR/topxgen-683ff6b05cfd33449f1d46c4)
+Our Llama-2-7b- and LLama-3-8b-based models are available on [Hugging Face](https://huggingface.co/collections/almanach/topxgen-689c82e2def790dcdbd74af8)
 
 ## Evaluation
 
