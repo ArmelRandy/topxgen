@@ -446,7 +446,7 @@ def create_datasets(tokenizer, args):
         from train_datasets import get
 
         dataset = get(
-            data_dir=args.data_dir if args.data_dir else os.path.join(PATH, "gen3"),
+            data_dir=args.data_dir if args.data_dir else os.path.join(PATH, "data/wiki/gemma-3-27b-it/topxgen/T=1.0/nllb-200-3.3B"),
             languages=args.target_languages,
             percentile=args.percentile,
             size=args.dataset_size,
@@ -763,7 +763,7 @@ def seq_to_seq(args):
         
     elif args.dataset_name_or_path == "ours":
         dataset = get(
-            data_dir=args.data_dir if args.data_dir else os.path.join(PATH, "gen3"),
+            data_dir=args.data_dir if args.data_dir else os.path.join(PATH, ""),
             languages=args.target_languages,
             percentile=args.percentile,
             size=args.dataset_size,
